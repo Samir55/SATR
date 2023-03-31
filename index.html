@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- <script src="/js/jsapi" type="text/javascript"></script> -->
+<!-- <script type="text/javascript">google.load("jquery", "1.3.2");</script> -->
+
+<link rel="stylesheet" type="text/css" href="index.css" />
+<!-- <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic'
+    rel='stylesheet' type='text/css'> -->
+
+<head>
+    <title>SATR: Zero-Shot Semantic Segmentation of 3D Shapes</title>
+    <meta property="og:description" content="SATR: Zero-Shot Semantic Segmentation of 3D Shapes" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
+    <script type="module" src="/js/model-viewer.min.js"></script>
+    <style>
+        model-viewer {
+            width: 100%;
+            height: 25vh;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container" style="margin-left: 50%;">
+        <div class="paper-title">
+            <h1>SATR: Zero-Shot Semantic Segmentation of 3D Shapes</h1>
+            <h2>Qualitative Results</h2>
+        </div>
+
+        <div id="authors">
+            <div class="affil-row">
+                <div class="venue text-center"><b>ICCV Paper ID: 1093</b></div>
+            </div>
+        </div>
+
+        <section id="results">
+            <h2>Coarse-Grained ZS Semantic Segmentation on FAUST</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <model-viewer alt="" id="20" crossorigin="anonymous" camera-orbit="45deg 55deg 4m" shadow-intensity="1"
+                        camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="50" crossorigin="anonymous"camera-orbit="45deg 55deg 4m" shadow-intensity="1"
+                        camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="108" crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <model-viewer alt="" id="184" crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-6">
+                    <model-viewer alt="" id="104" crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+
+            <h2>Fine-Grained ZS Semantic Segmentation on FAUST Dataset</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <model-viewer alt="" id="5_output_fine_grained" crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="15_output_fine_grained"  crossorigin="anonymous"camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="59_output_fine_grained"  crossorigin="anonymous"camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <model-viewer alt="" id="65_output_fine_grained" crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="99_output_fine_grained" crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="113_output_fine_grained"  crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <model-viewer alt="" id="119_output_fine_grained"  crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="153_output_fine_grained" crossorigin="anonymous"  camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="193_output_fine_grained"  crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <model-viewer alt="" id="197_output_fine_grained"  crossorigin="anonymous"camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+                <div class="col-md-4">
+                    <model-viewer alt="" id="199_output_fine_grained" crossorigin="anonymous" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+
+
+            <h2>ZS Semantic Segmentation on ShapeNetPart</h2>
+            <hr>
+            <div class="row">
+                <!-- <div class="col-md-4">
+                    <model-viewer alt="" src="/assets/ShapeNetPart/mug" camera-orbit="45deg 55deg 4m"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div> -->
+                <div class="col-md-4">
+                    <model-viewer alt="" id="mig2" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="bag4" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="bag1" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="knife4" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="guitar3" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="guitar2" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="knife3" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="mig3" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+
+                <div class="col-md-4"> 
+                    <model-viewer alt="" id="knife" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <model-viewer alt="" id="guitar" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="knife 2" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+
+
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="bag3" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+
+
+                <div class="col-md-4">
+                    <model-viewer alt="" id="bag2" camera-orbit="45deg 55deg 4m" crossorigin="anonymous"
+                        shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+
+        </section>
+
+        <br />
+
+        <!-- <h2>3D Highlighting Capabilities</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <model-viewer alt="" src="/assets/highlighting/output (6th copy).glb" camera-orbit="45deg 55deg 4m"
+                    shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+        </div> -->
+
+    </div>
+
+    <script>
+        document.getElementById('bag2').src = "/assets/ShapeNetPart/bag2.glb"
+        document.getElementById('bag3').src = "/assets/ShapeNetPart/bag3.glb"
+        document.getElementById('knife 2').src = "/assets/ShapeNetPart/knife 2.glb"
+        document.getElementById('guitar').src = "/assets/ShapeNetPart/guitar.glb"
+        document.getElementById('knife').src = "/assets/ShapeNetPart/knife.glb"
+        document.getElementById('mig3').src = "/assets/ShapeNetPart/mig3.glb"
+        document.getElementById('knife3').src = "/assets/ShapeNetPart/knife3.glb"
+        document.getElementById('guitar2').src = "/assets/ShapeNetPart/guitar2.glb"
+        document.getElementById('guitar3').src = "/assets/ShapeNetPart/guitar3.glb"
+        document.getElementById('knife4').src = "/assets/ShapeNetPart/knife4.glb"
+        document.getElementById('bag1').src = "/assets/ShapeNetPart/bag1.glb"
+        document.getElementById('bag4').src = "/assets/ShapeNetPart/bag4.glb"
+        document.getElementById('mig2').src = "/assets/ShapeNetPart/mig2.glb"
+        document.getElementById('20').src = "/assets/CGFAUST/20.glb"
+        document.getElementById('50').src = "/assets/CGFAUST/50.glb"
+        document.getElementById('108').src = "/assets/CGFAUST/108.glb"
+        document.getElementById('184').src = "/assets/CGFAUST/184.glb"
+        document.getElementById('104').src = "/assets/CGFAUST/104.glb"
+
+        document.getElementById('5_output_fine_grained').src = "/assets/FGFAUST/5_output_fine_grained.glb"
+        document.getElementById('15_output_fine_grained').src = "/assets/FGFAUST/15_output_fine_grained.glb"
+        document.getElementById('59_output_fine_grained').src = "/assets/FGFAUST/59_output_fine_grained.glb"
+        document.getElementById('65_output_fine_grained').src = "/assets/FGFAUST/65_output_fine_grained.glb"
+        document.getElementById('99_output_fine_grained').src = "/assets/FGFAUST/99_output_fine_grained.glb"
+        document.getElementById('113_output_fine_grained').src = "/assets/FGFAUST/113_output_fine_grained.glb"
+        document.getElementById('119_output_fine_grained').src = "/assets/FGFAUST/119_output_fine_grained.glb"
+        document.getElementById('153_output_fine_grained').src = "/assets/FGFAUST/153_output_fine_grained.glb"
+        document.getElementById('193_output_fine_grained').src = "/assets/FGFAUST/193_output_fine_grained.glb"
+        document.getElementById('197_output_fine_grained').src = "/assets/FGFAUST/197_output_fine_grained.glb"
+        document.getElementById('199_output_fine_grained').src = "/assets/FGFAUST/199_output_fine_grained.glb"
+
+    </script>
+</body>
+
+</html>     
