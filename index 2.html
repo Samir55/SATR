@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ScanEnts3D: Exploiting Phrase-to-3D-Object Correspondences for Improved Visio-Linguistic Models in 3D Scenes">
+
+  <meta name="keywords" content="ScanEnts3D, Dataset, 3D Visual Grounding, 3D Dense Captioning, Referit3D, ScanRefer, ScanEnts3D: Exploiting Phrase-to-3D-Object Correspondences for Improved Visio-Linguistic Models in 3D Scenes">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ScanEnts3D: Exploiting Phrase-to-3D-Object Correspondences for Improved Visio-Linguistic Models in 3D Scenes</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <!-- <script src="./static/js/index.js"></script> -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        //do work
+      
+      const copyButtonLabel = "Copy BibTex";
+
+      // use a class selector if available
+      let blocks = document.querySelectorAll("pre");
+      console.log(blocks)
+      
+      blocks.forEach((block) => {
+        // only add button if browser supports Clipboard API
+        if (navigator.clipboard) {
+          let button = document.createElement("button");
+      
+          button.innerText = copyButtonLabel;
+          button.classList.add("btn");
+          button.classList.add("btn-primary");
+          button.style.alignContent = "center";
+          button.style.textAlign = "center";
+          block.parentElement.appendChild(button);
+      
+          button.addEventListener("click", async () => {
+            await copyCode(block, button);
+          });
+        }
+      });
+      
+      async function copyCode(block, button) {
+        let code = block.querySelector("code");
+        let text = code.innerText;
+      
+        await navigator.clipboard.writeText(text);
+      
+        // visual feedback that task is completed
+        button.innerText = "BibTex Copied!";
+      
+        setTimeout(() => {
+          button.innerText = copyButtonLabel;
+        }, 1000);
+      }
+  });
+  </script>
+
+  <style>
+
+    pre[class*="language-"] {
+      position: relative;
+      overflow: auto;
+    
+      /* make space  */
+      margin: 5px 0;
+      padding: 1.75rem 0 1.75rem 1rem;
+      border-radius: 10px;
+    }
+    
+    pre[class*="language-"] button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    
+      font-size: 0.9rem;
+      padding: 0.15rem;
+     
+    
+      border: ridge 1px;
+      border-radius: 5px;
+      text-shadow: #c4c4c4 0 0 2px;
+    }
+    
+    pre[class*="language-"] button:hover {
+      cursor: pointer;  
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ScanEnts3D: Exploiting Phrase-to-3D-Object Correspondences for Improved Visio-Linguistic Models in 3D Scenes</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://samir55.github.io">Ahmed Abdelreheem</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://kyleolsz.github.io/">Kyle Olszewski</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="http://hsinyinglee.com/">Hsin-Ying Lee</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://peterwonka.net/">Peter Wonka</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://optas.github.io/">Panos Achlioptas</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>KAUST,</span>
+            <span class="author-block"><sup>2</sup>Snap Inc.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Conference Link. (isA)-->
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2212.06250"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="#dataset-download"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The two popular datasets <a href="https://daveredrum.github.io/ScanRefer/">ScanRefer</a> and <a href="https://referit3d.github.io/">ReferIt3D</a> connect natural language to real-world 3D data. 
+            In this paper, we curate a large-scale and complementary dataset extending both the aforementioned 
+            ones by associating all objects mentioned in a referential sentence to their underlying instances inside a 3D scene. 
+            Specifically, our Scan Entities in 3D (ScanEnts3D) dataset provides explicit correspondences between 369k objects, 
+            across 84k natural referential sentences, covering 705 real-world scenes. Crucially, we show that by incorporating intuitive 
+            losses that enable learning from this novel dataset, we can significantly improve the performance of several recently 
+            introduced neural listening architectures, including improving the SoTA in both the Nr3D and 
+            ScanRefer benchmarks by 4.3%, and 5.0% respectively. Moreover, we experiment with competitive baselines and
+            recent methods for the task of language generation and show that, as with neural listeners, 3D neural speakers 
+            can also noticeably benefit by training with ScanEnts3D, including improving the SoTA by 13.2 CIDEr points on the Nr3D benchmark. 
+            Overall, our carefully conducted experimental studies strongly support the conclusion that, by learning on ScanEnts3D, commonly used 
+            visio-linguistic 3D architectures can become more efficient and interpretable in  their generalization without needing to provide these 
+            newly collected annotations at test time.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column ">
+        <div class="content" style="text-align:center;">
+          <h2 class="title is-3 has-text-centered">🚀 Motivation</h2>
+          <img src="images/teaser.gif" class="" style="width: 80%;margin-bottom: 2%;">
+
+          <p style="text-align:center;" class="has-text-justified">
+
+            When humans describe an object in a 3D scene, they typically go beyond enumerating its ego-centric properties, e.g., its texture or geometry. 
+            Instead, they refer to direct relations between the target and other co-existing objects in the scene (dubbed as `anchors'). 
+            In this work, we investigate the rigorous exploitation of such anchor objects by annotating them and incorporating them in modern neural listening and speaking architectures via modular and flexible loss functions.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content" style="text-align:center;">
+          <h2 class="title is-3 has-text-centered">🔥 ScanEnts3D: <strong>Scan</strong> <strong>Ent</strong>itie<strong>s</strong> in <strong>3D</strong> Dataset</h2>
+          
+          <img src="images/d2.jpg" class="" style="width: 88%;margin-bottom: 2%;">
+          
+          <p style="text-align:center;" class="has-text-justified">
+          We share with the research community grounding annotations that go beyond each target object and explicitly provide all the correspondences between all 3D objects and any of their mentions. 
+          We introduce a large-scale dataset extending both Nr3D and ScanRefer by grounding all objects mentioned in
+          their referential utterances to their underlying 3D scenes. Our ScanEnts3D dataset (Scan Entities in 3D) includes
+          an additional 369,039 language-to-object correspondences, more than three times the number from the original works.
+          </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content" style="text-align:center;">
+          <h2 class="title is-3 has-text-centered">🔥 Method</h2>
+          <p style="text-align:center;" class="has-text-justified">
+          We propose modifications to several existing state-of-the-art architectures to utilize the additional annotations 
+          provided by ScanEnts3D during training. 
+          We explore two tasks: neural listening and speaking and multiple architectures per task. 
+          Our main goal is to demonstrate the inherent value of the curated annotations. 
+          All proposed modifications are simple to implement and lead to substantial improvements. 
+          We, therefore, conjecture that similar modifications are (or will be) possible to extant (and future) architectures making use of ScanEnts3D.
+          </p>
+
+          <h2 class="title is-4">3D Grounded Language Comprehension</h2>
+
+          <img src="images/listener.png" class="" style="width: 88%;margin-bottom: 2%;">
+          
+          <p style="text-align:center;" class="has-text-justified">
+          For the 3D Grounded Language Comprehension task, we propose three new loss functions, which are flexible, generic, and can serve as auxiliary add-ons to existing neural listeners. 
+          The above figure demonstrates our proposed listening losses adjusted for the MVT model.
+          The proposed losses are applied independently on top of object-centric and context-aware features. 
+          Crucially, the extended MVT-ScanEnts model can predict all anchor objects (shown in purple), same-class distractor objects (red), and the target (green). 
+          The default model only predicts the target. 
+          </p>
+
+          <h2 class="title is-4">Grounded Language Production in 3D</h2>
+          <img src="images/speaker.jpg" class="" style="width: 68%; margin-bottom: 2%;">
+
+          <p style="text-align:center;" class="has-text-justified">
+          For the Grounded Language Production in 3D task, we propose corresponding modifications and appropriate losses to two existing architectures:
+          “Show, Attend & Tell” Model and X-Trans2Cap. In the above figure, we propose the M2Cap-ScanEnts model adapting X-Trans2Cap model to operate with our proposed losses.
+          The model is given a set of 3D objects in a 3D scene and outputs a caption for the target object (e.g., the table in the green box). 
+          The X-Trans2Cap model exploits cross-modal knowledge transfer (3D inputs together with their counterpart 2D images) and adopts a student-teacher paradigm. 
+          Boxes in yellow show our modifications. Here, we use a transfer learning approach by finetuning a pre-trained object encoder trained on the listening task to promote discriminative object feature representations. 
+          At the same time, our modular loss guides the network to predict all object instances mentioned in the ground truth caption.
+          </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="dataset-browser">
+  <div class=" is-max-desktop">
+
+    <div class=" is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="">
+        <div class="content" style="text-align:center;">
+          <h2 class="title is-3 has-text-centered">🔥 Qualitative Results</h2>
+          <img src="images/qualResults.jpeg" class="" style="width: 50%; margin-bottom: 2%;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="dataset-download">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content" style="text-align:center;">
+          <h2 class="title is-3 has-text-centered">🌎 Dataset Download</h2>
+          
+          <p style="text-align:center;">
+          Coming soon! If you are interested, please <a href="https://forms.gle/fR3eMbJs4AKNiyz67">fill out this form</a> and you will recieve a notification 🔔 once our dataset is out!
+          </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="dataset-browser">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content" style="text-align:center;">
+          <h2 class="title is-3 has-text-centered">👀 Dataset Browser</h2>
+          <p style="text-align:center; " class="has-text-centered">
+          You can browse a few sampled examples of ScanEnts3D dataset <a href="http://scanents3d-browser.vercel.app/">here 🙌.</a>
+          </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3  has-text-centered">🚀 Citation</h2>
+            <div class="language-css">
+            <pre  style="">
+              <code>
+@article{abdelreheem2022scanents,
+  author = {Abdelreheem, Ahmed and Olszewski, Kyle and Lee, Hsin-Ying and Wonka, Peter and Achlioptas, Panos},
+  title = {ScanEnts3D: Exploiting Phrase-to-3D-Object Correspondences for Improved Visio-Linguistic Models in 3D Scenes},
+  journal = Computing Research Repository (CoRR),
+  volume = {abs/2212.06250},
+  year = {2022}
+}</code></pre>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is based on the <a href="https://nerfies.github.io/">Nerfies website template</a>, which is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
