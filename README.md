@@ -26,6 +26,7 @@ from KAUST and LIX, Ecole Polytechnique.
         journal = Computing Research Repository (CoRR),
         volume = {abs/},
         year = {2023}
+}
       
 ```
 
