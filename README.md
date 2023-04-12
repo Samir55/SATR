@@ -1,7 +1,7 @@
 # SATR: Zero-Shot Semantic Segmentation of 3D Shapes
 
 [![Website Badge](https://raw.githubusercontent.com/referit3d/referit3d/eccv/images/project_website_badge.svg)](https://samir55.github.io/SATR/)
-[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2304.04909)
+[![arXiv](https://img.shields.io/badge/arXiv-2304.04909-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2304.04909)
 
 Code & Benchmark will be released soon!    
 Stay tuned! 
