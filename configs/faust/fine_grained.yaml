@@ -1,0 +1,18 @@
+dataset: faust
+backend: satr+glip
+backend_type: detection_based
+dataset_dir: "data/FAUST/scans"
+
+region_names: "['arm', 'head', 'torso', 'leg', 'belly_button', 'nose', 'eye', 'chin', 'mouth', 'ear', 'neck', 'forehead', 'shoulder', 'elbow', 'hand', 'knee', 'foot']"
+object_class: "man"
+
+satr:
+  gaussian_reweighting: true
+  face_smoothing: true
+  face_smoothing_n_ring: 5
+
+camera:
+  n_views: 10
+  frontview_std: 4
+  frontview_center: [3.14, 0.0]
+  render_res: 1024

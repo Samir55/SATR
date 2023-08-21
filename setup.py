@@ -1,0 +1,28 @@
+from setuptools import setup
+
+setup(name='meshseg',
+      version='1.0',
+      description='Official implementation of satr: zero-shot semantic segmentation of 3d shapes',
+      url='https://samir55.github.io/SATR/',
+      author='Ahmed Abdelreheem',
+      author_email='ahmed.abdelreheem@kaust.edu.sa',
+      license='MIT',
+      install_requires=['potpourri3d',
+                        # 'numpy<=1.19',
+                        'matplotlib',
+                        'yacs',
+                        'ftfy',
+                        'timm',
+                        'einops',
+                        'prettytable',
+                        'pycocotools',
+                        'trimesh',
+                        'scikit-learn',
+                        'tqdm',
+                        'opencv-python',
+                        'nltk',
+                        'inflect',
+                        'transformers',
+                        'omegaconf'], # todo add Koalin in the readme
+      packages=['meshseg'],
+      zip_safe=False)

@@ -1,0 +1,17 @@
+dataset: faust
+backend: satr+glip
+backend_type: detection_based
+dataset_dir: data/shapenetpart/Earphone/models
+satr:
+  gaussian_reweighting: true
+  face_smoothing: true
+  face_smoothing_n_ring: 5
+camera:
+  n_views: 10
+  frontview_std: 4
+  frontview_center:
+  - 3.14
+  - 0.0
+  render_res: 1024
+region_names: '[''cable'', ''ear_pads'', ''headband'']'
+object_class: earphone
