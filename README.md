@@ -79,17 +79,17 @@ python setup.py build develop --user
 Please create a suitable config file to run on an input mesh (see the ``configs`` folder for examples). For instance, to run on a penguin example, use the following command from the repository root directory:
 
 ```shell
-CUDA_VISIBLDE_DEVICES=0 python scripts/single_dataset_example.py -cfg configs/demo/penguin.yaml -mesh_name penguin.obj -output_dir outputs/demo/penguin
+CUDA_VISIBLE_DEVICES=0 python scripts/single_dataset_example.py -cfg configs/demo/penguin.yaml -mesh_name penguin.obj -output_dir outputs/demo/penguin
 ``` 
 
 ### FAUST/ShapeNetPart
-To run on a single example (for instance, tr_scan_000) of the FUAST dataset on the coarse segmentation, please use the following command
+To run on a single example (for instance, tr_scan_000) of the FAUST dataset on the coarse segmentation, please use the following command
 ```shell
-CUDA_VISIBLDE_DEVICES=0 python scripts/single_dataset_example.py -cfg configs/faust/coarse.yaml -mesh_name tr_scan_000.obj -output_dir path_to_output_dir
+CUDA_VISIBLE_DEVICES=0 python scripts/single_dataset_example.py -cfg configs/faust/coarse.yaml -mesh_name tr_scan_000.obj -output_dir path_to_output_dir
 ``` 
 and for the fine-grained segmentation
 ```shell
-CUDA_VISIBLDE_DEVICES=0 python scripts/single_dataset_example.py -cfg configs/faust/fine_grained.yaml -mesh_name tr_scan_000.obj -output_dir path_to_output_dir
+CUDA_VISIBLE_DEVICES=0 python scripts/single_dataset_example.py -cfg configs/faust/fine_grained.yaml -mesh_name tr_scan_000.obj -output_dir path_to_output_dir
 ``` 
 
 For the ShapeNetPart models, please run ``scripts/single_dataset_example.py`` with the suitable config file for each category found in ``configs/shapenetpart``
